@@ -12,9 +12,9 @@ public class JustApp
         System.out.println("You ordered ...");
 
         // Add some items (burgers,pizzas,fries,salads)
-        Burger cheeseburger = new Burger("Cheeseburger",  1.99,  "Tasty");
-        Pizza tuna = new Pizza("Tuna Pizza", 8.99,  "Surprisingly nice");
-        Pizza classic = new Pizza("Plain",  8.99, "A bit boring");
+        Burger cheeseburger = new Burger("Cheeseburger",  1.90,  "Tasty");
+        Pizza tuna = new Pizza("Tuna Pizza", 8.90,  "Surprisingly nice");
+        Pizza classic = new Pizza("Plain",  8.90, "A bit boring");
         Fries curry = new Fries("curry", 1.99, "Nice");
 
         // Add all the orders to a collection ( array / array list )
@@ -32,6 +32,10 @@ public class JustApp
         }
 
         // Find the cost of the whole order
-
+        double totalCost = 0;
+        for (Food item : items) {
+            totalCost += item.getPrice();
+        }
+        System.out.println("Total Cost:  €" + totalCost);
     }
 }
